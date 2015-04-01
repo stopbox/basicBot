@@ -224,6 +224,7 @@
                 ["sound", "The song you played had bad sound quality or no sound. "],
                 ["nsfw", "The song you contained was NSFW (image or sound). "],
                 ["unavailable", "The song you played was not available for some users. "]
+                ["length", "The song you played was to long max is six minutes. "]
             ],
             afkpositionCheck: 15,
             afkRankCheck: "ambassador",
@@ -859,10 +860,6 @@
                         return API.moderateForceSkip();
                     }
                 }
-            }
-
-            if (basicBot.room.historyList.length > 30) {
-                basicBot.room.historyList.length = 0;
             }
             
             var alreadyPlayed = false;
